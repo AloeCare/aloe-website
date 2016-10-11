@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding-top: 80px;
+}
+
+input {
+  margin-bottom: 5px;
+  padding: 5px;
+  width: 200px;
+}
+
+footer.container {
+  padding: 20px 15px 30px;
+}
+
+a:hover {
+  color: purple;
+  text-decoration: none;
+}
+
+.navbar {
+  background: white;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  opacity: 0.95;
+}
+
+.navbar-default .navbar-nav .active,
+.navbar-default .navbar-nav .active:focus,
+.navbar-default .navbar-nav .active:hover {
+  background: none;
+  box-shadow: none;
+  color: black;
+  font-weight: 400;
+}
+
+.navbar-fixed-top .nav {
+  padding: 15px 0;
+}
+
+#home, #clinics, #patients {
+  min-height: 500px;
+  opacity: 0;
+  text-align: center;
+}
+
+.clinic, .patient {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  color: #333333;
+  display: block;
+  margin: 50px 0 0;
+  min-height: 150px;
+  padding: 30px;
+  position: relative;
+}
+
+.fa-trash-o, .fa-plus {
+  cursor: pointer;
+  display: none;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.fa-trash-o {
+  color: #f05c79;
+}
+
+.fa-plus {
+  color: #80b3ff;
+}
+
+.clinic:hover .fa-trash-o, .clinic:hover .fa-plus,
+.patient:hover .fa-trash-o, .patient:hover .fa-plus {
+  display: block;
+}
+
+#new-clinic, #new-patient {
+  padding: 40px 30px 0;
+}
