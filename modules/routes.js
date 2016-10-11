@@ -7,9 +7,9 @@ import Patients from './Patients'
 
 module.exports = (
   <Route path="/" component={App}>
-	  <IndexRoute component={Home}/>
+    <IndexRoute component={Home}/>
 
     <Route path="/clinics" component={Clinics}/>
-		<Route path="/clinics/:clinicId" component={Patients}/>
+    <Route path="/clinics/:clinicId" component={Patients}/>
   </Route>
 )

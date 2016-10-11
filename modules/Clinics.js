@@ -8,7 +8,7 @@ var Clinics = React.createClass({
     };
   },
 
-  loadClinics: function() {
+  loadClinics: function(){
     $.ajax({
       url: 'http://localhost:8000/clinics',
       dataType: 'json',
@@ -22,11 +22,11 @@ var Clinics = React.createClass({
     });
   },
 
-  componentDidMount: function() {
+  componentDidMount: function(){
     this.loadClinics();
   },
 
-  render: function() {
+  render: function(){
     return (
       <div id="clinics" className="container">
         <div className="row">

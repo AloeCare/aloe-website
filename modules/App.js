@@ -8,9 +8,7 @@ export default React.createClass({
     return (
       <div>
         <NavBar/>
-
-  			{this.props.children || <Home/>}
-
+        {this.props.children || <Home/>}
         <Footer/>
       </div>
     )

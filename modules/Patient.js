@@ -7,8 +7,8 @@ export default React.createClass({
     };
   },
 
-  render: function() {
-  	var patient = this.state.patient;
+  render: function(){
+    var patient = this.state.patient;
     return (
       <div className="col-xs-3">
         <div className="patient">

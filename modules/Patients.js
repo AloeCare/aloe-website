@@ -8,7 +8,7 @@ export default React.createClass({
     };
   },
 
-  loadPatients: function() {
+  loadPatients: function(){
     $.ajax({
       url: 'http://localhost:8000/clinics/' + this.props.params.clinicId,
       dataType: 'json',
@@ -22,11 +22,11 @@ export default React.createClass({
     });
   },
 
-  componentDidMount: function() {
+  componentDidMount: function(){
     this.loadPatients();
   },
 
-  render: function() {
+  render: function(){
     return (
       <div id="patients" className="container">
         <div className="row">

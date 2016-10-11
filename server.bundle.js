@@ -60,9 +60,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var express = __webpack_require__(11);
-	var path = __webpack_require__(12);
-	var compression = __webpack_require__(13);
+	var express = __webpack_require__(14);
+	var path = __webpack_require__(15);
+	var compression = __webpack_require__(16);
 
 	var app = express();
 	app.use(compression());
@@ -126,19 +126,11 @@
 
 	'use strict';
 
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
 	var _reactRouter = __webpack_require__(3);
 
 	var _App = __webpack_require__(5);
 
 	var _App2 = _interopRequireDefault(_App);
-
-	var _Clinic = __webpack_require__(8);
-
-	var _Clinic2 = _interopRequireDefault(_Clinic);
 
 	var _Clinics = __webpack_require__(10);
 
@@ -148,25 +140,18 @@
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Patients = __webpack_require__(9);
+	var _Patients = __webpack_require__(12);
 
 	var _Patients2 = _interopRequireDefault(_Patients);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	module.exports = _react2.default.createElement(
+	module.exports = React.createElement(
 	  _reactRouter.Route,
 	  { path: '/', component: _App2.default },
-	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
-	  _react2.default.createElement(
-	    _reactRouter.Route,
-	    { path: '/clinics', component: _Clinics2.default },
-	    _react2.default.createElement(
-	      _reactRouter.Route,
-	      { path: '/clinics/:clinicId', component: _Clinic2.default },
-	      _react2.default.createElement(_reactRouter.Route, { path: '/patients', component: _Patients2.default })
-	    )
-	  )
+	  React.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
+	  React.createElement(_reactRouter.Route, { path: '/clinics', component: _Clinics2.default }),
+	  React.createElement(_reactRouter.Route, { path: '/clinics/:clinicId', component: _Patients2.default })
 	);
 
 /***/ },
@@ -183,13 +168,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _NavLink = __webpack_require__(6);
+	var _Footer = __webpack_require__(6);
 
-	var _NavLink2 = _interopRequireDefault(_NavLink);
+	var _Footer2 = _interopRequireDefault(_Footer);
 
 	var _Home = __webpack_require__(7);
 
 	var _Home2 = _interopRequireDefault(_Home);
+
+	var _NavBar = __webpack_require__(8);
+
+	var _NavBar2 = _interopRequireDefault(_NavBar);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -199,34 +188,9 @@
 	    return _react2.default.createElement(
 	      'div',
 	      null,
-	      _react2.default.createElement(
-	        'h1',
-	        null,
-	        'Aloe'
-	      ),
-	      _react2.default.createElement(
-	        'ul',
-	        { role: 'nav' },
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _NavLink2.default,
-	            { to: '/', onlyActiveOnIndex: true },
-	            'Home'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _NavLink2.default,
-	            { to: '/clinics' },
-	            'Clinics'
-	          )
-	        )
-	      ),
-	      this.props.children || _react2.default.createElement(_Home2.default, null)
+	      _react2.default.createElement(_NavBar2.default, null),
+	      this.props.children || _react2.default.createElement(_Home2.default, null),
+	      _react2.default.createElement(_Footer2.default, null)
 	    );
 	  }
 	});
@@ -235,26 +199,38 @@
 /* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(3);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: 'NavLink',
+	  displayName: "Footer",
 	  render: function render() {
-	    return _react2.default.createElement(_reactRouter.Link, _extends({}, this.props, { activeClassName: 'active' }));
+	    return _react2.default.createElement(
+	      "footer",
+	      { className: "container" },
+	      _react2.default.createElement(
+	        "div",
+	        { className: "row" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "col-lg-12" },
+	          _react2.default.createElement(
+	            "p",
+	            null,
+	            "Copyright \xA9 Linked Ladies 2016"
+	          )
+	        )
+	      )
+	    );
 	  }
 	});
 
@@ -295,54 +271,67 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Patients = __webpack_require__(9);
+	var _NavLink = __webpack_require__(9);
 
-	var _Patients2 = _interopRequireDefault(_Patients);
+	var _NavLink2 = _interopRequireDefault(_NavLink);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: 'Clinic',
-
-	  getInitialState: function getInitialState() {
-	    return {
-	      data: []
-	    };
-	  },
-
-	  loadPatients: function loadPatients() {
-	    $.ajax({
-	      url: 'http://localhost:8000/clinics/' + this.props.params.clinicId,
-	      dataType: 'json',
-	      success: function (data) {
-	        this.setState({ data: data });
-	        return data;
-	      }.bind(this),
-	      error: function (xhr, status, err) {
-	        console.error('#GET Error', status, err.toString());
-	      }.bind(this)
-	    });
-	  },
-
-	  componentDidMount: function componentDidMount() {
-	    this.loadPatients();
-	  },
-
+	  displayName: 'NavBar',
 	  render: function render() {
 	    return _react2.default.createElement(
-	      'div',
-	      null,
+	      'nav',
+	      { className: 'navbar navbar-default navbar-fixed-top', role: 'navigation' },
 	      _react2.default.createElement(
-	        'h2',
-	        null,
-	        'Patients'
-	      ),
-	      _react2.default.createElement(
-	        'ul',
-	        { className: 'Patients' },
-	        this.state.data.map(function (patient) {
-	          return _react2.default.createElement(_Patients2.default, { key: patient.id, data: patient });
-	        })
+	        'div',
+	        { className: 'container' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'navbar-header' },
+	            _react2.default.createElement(
+	              'button',
+	              { type: 'button', className: 'navbar-toggle collapsed', 'data-toggle': 'collapse', 'data-target': '#navbar', 'aria-expanded': 'false', 'aria-controls': 'navbar' },
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'sr-only' },
+	                'Toggle navigation'
+	              ),
+	              _react2.default.createElement('span', { className: 'icon-bar' }),
+	              _react2.default.createElement('span', { className: 'icon-bar' }),
+	              _react2.default.createElement('span', { className: 'icon-bar' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'navbar', className: 'collapse navbar-collapse' },
+	            _react2.default.createElement(
+	              'ul',
+	              { className: 'nav navbar-nav' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _NavLink2.default,
+	                  { to: '/', onlyActiveOnIndex: true },
+	                  'Home'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _NavLink2.default,
+	                  { to: '/clinics' },
+	                  'Clinics'
+	                )
+	              )
+	            )
+	          )
+	        )
 	      )
 	    );
 	  }
@@ -358,30 +347,20 @@
 	  value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(3);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: 'Patients',
-
-	  getInitialState: function getInitialState() {
-	    return {
-	      patient: this.props.data
-	    };
-	  },
-
+	  displayName: 'NavLink',
 	  render: function render() {
-	    var patient = this.state.patient;
-	    return _react2.default.createElement(
-	      'li',
-	      null,
-	      this.state.patient.firstName,
-	      ' ',
-	      this.state.patient.lastName
-	    );
+	    return _react2.default.createElement(_reactRouter.Link, _extends({}, this.props, { activeClassName: 'active' }));
 	  }
 	});
 
@@ -395,9 +374,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _NavLink = __webpack_require__(6);
+	var _Clinic = __webpack_require__(11);
 
-	var _NavLink2 = _interopRequireDefault(_NavLink);
+	var _Clinic2 = _interopRequireDefault(_Clinic);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -416,7 +395,7 @@
 	      dataType: 'json',
 	      success: function (data) {
 	        this.setState({ data: data });
-	        return data;
+	        $('#clinics').fadeTo('fast', 1);
 	      }.bind(this),
 	      error: function (xhr, status, err) {
 	        console.error('#GET Error', status, err.toString());
@@ -431,28 +410,14 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      { id: 'clinics', className: 'container' },
 	      _react2.default.createElement(
-	        'h2',
-	        null,
-	        'Clinics'
-	      ),
-	      _react2.default.createElement(
-	        'ul',
-	        { className: 'Clinics' },
+	        'div',
+	        { className: 'row' },
 	        this.state.data.map(function (clinic) {
-	          return _react2.default.createElement(
-	            'li',
-	            { key: clinic.id },
-	            _react2.default.createElement(
-	              _NavLink2.default,
-	              { to: '/clinics/' + clinic.id },
-	              clinic.name
-	            )
-	          );
+	          return _react2.default.createElement(_Clinic2.default, { key: clinic.id, clinic: clinic });
 	        })
-	      ),
-	      this.props.children
+	      )
 	    );
 	  }
 	});
@@ -461,18 +426,186 @@
 
 /***/ },
 /* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _NavLink = __webpack_require__(9);
+
+	var _NavLink2 = _interopRequireDefault(_NavLink);
+
+	var _Patients = __webpack_require__(12);
+
+	var _Patients2 = _interopRequireDefault(_Patients);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Clinic',
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      clinic: this.props.clinic
+	    };
+	  },
+
+	  render: function render() {
+	    var clinic = this.state.clinic;
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'col-xs-3' },
+	      _react2.default.createElement(
+	        _NavLink2.default,
+	        { to: '/clinics/' + clinic.id, className: 'clinic' },
+	        _react2.default.createElement('i', { className: 'fa fa-trash-o', 'aria-hidden': 'true' }),
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          clinic.name
+	        ),
+	        _react2.default.createElement(
+	          'h4',
+	          null,
+	          clinic.description
+	        )
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Patient = __webpack_require__(13);
+
+	var _Patient2 = _interopRequireDefault(_Patient);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Patients',
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      data: []
+	    };
+	  },
+
+	  loadPatients: function loadPatients() {
+	    $.ajax({
+	      url: 'http://localhost:8000/clinics/' + this.props.params.clinicId,
+	      dataType: 'json',
+	      success: function (data) {
+	        this.setState({ data: data });
+	        $('#patients').fadeTo('fast', 1);
+	      }.bind(this),
+	      error: function (xhr, status, err) {
+	        console.error('#GET Error', status, err.toString());
+	      }.bind(this)
+	    });
+	  },
+
+	  componentDidMount: function componentDidMount() {
+	    this.loadPatients();
+	  },
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { id: 'patients', className: 'container' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        this.state.data.map(function (patient) {
+	          return _react2.default.createElement(_Patient2.default, { key: patient.id, patient: patient });
+	        })
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: "Patient",
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      patient: this.props.patient
+	    };
+	  },
+
+	  render: function render() {
+	    var patient = this.state.patient;
+	    return _react2.default.createElement(
+	      "div",
+	      { className: "col-xs-3" },
+	      _react2.default.createElement(
+	        "div",
+	        { className: "patient" },
+	        _react2.default.createElement("i", { className: "fa fa-trash-o", "aria-hidden": "true" }),
+	        _react2.default.createElement(
+	          "h3",
+	          null,
+	          patient.firstName
+	        ),
+	        _react2.default.createElement(
+	          "h4",
+	          null,
+	          patient.lastName
+	        )
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 14 */
 /***/ function(module, exports) {
 
 	module.exports = require("express");
 
 /***/ },
-/* 12 */
+/* 15 */
 /***/ function(module, exports) {
 
 	module.exports = require("path");
 
 /***/ },
-/* 13 */
+/* 16 */
 /***/ function(module, exports) {
 
 	module.exports = require("compression");

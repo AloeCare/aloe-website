@@ -9,7 +9,7 @@ export default React.createClass({
     };
   },
 
-  render: function() {
+  render: function(){
     var clinic = this.state.clinic
     return (
       <div className="col-xs-3">
