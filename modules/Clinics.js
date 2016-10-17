@@ -29,6 +29,7 @@ var Clinics = React.createClass({
   render: function(){
     return (
       <div id="clinics" className="container">
+        <h1>Clinics</h1>
         <div className="row">
           {
             this.state.data.map(function(clinic) {

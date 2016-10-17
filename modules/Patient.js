@@ -1,4 +1,5 @@
 import React from 'react'
+import NavLink from './NavLink'
 
 export default React.createClass({
   getInitialState: function(){
@@ -11,11 +12,10 @@ export default React.createClass({
     var patient = this.state.patient;
     return (
       <div className="col-xs-3">
-        <div className="patient">
-          <i className="fa fa-trash-o" aria-hidden="true"></i>
-          <h3>{patient.firstName}</h3>
-          <h4>{patient.lastName}</h4>
-        </div>
+        <NavLink to={`/patients/${patient.patientId}`} className="patient">
+          <h3>{patient.patientFirstName}</h3>
+          <h4>{patient.patientLastName}</h4>
+        </NavLink>
       </div>
     )
   }

@@ -29,10 +29,11 @@ export default React.createClass({
   render: function(){
     return (
       <div id="patients" className="container">
+        <h1>Patients</h1>
         <div className="row">
           {
             this.state.data.map(function(patient) {
-              return <Patient key={patient.id} patient={patient}/>
+              return <Patient key={patient.patientId} patient={patient}/>
             })
           }
         </div>
