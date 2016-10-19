@@ -1,4 +1,5 @@
 import React from 'react'
+import NewPatient from './NewPatient'
 import Patient from './Patient'
 
 export default React.createClass({
@@ -28,7 +29,7 @@ export default React.createClass({
 
   render: function(){
     return (
-      <div id="patients" className="container">
+      <div id="patients" className="container main">
         <h1>Patients</h1>
         <div className="row">
           {
@@ -36,6 +37,7 @@ export default React.createClass({
               return <Patient key={patient.patientId} patient={patient}/>
             })
           }
+          <NewPatient clinicId={this.props.params.clinicId}/>
         </div>
       </div>
     )

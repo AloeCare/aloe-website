@@ -32,7 +32,7 @@ export default React.createClass({
   render: function(){
     var patient = this.state.patient;
     return (
-      <div id="patient" className="container">
+      <div id="patient" className="container main">
         <div className="row">
           <div className="col-lg-12">
             <h1>Patient Record</h1>

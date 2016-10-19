@@ -18,6 +18,16 @@ input {
   width: 200px;
 }
 
+table {
+  font-size: 14px;
+  padding-left: 30px;
+}
+
+table tr * {
+  border: 1px solid #CCCCCC;
+  padding: 10px 20px;
+}
+
 footer.container {
   padding: 20px 15px 30px;
 }
@@ -48,8 +58,11 @@ a:hover {
   padding: 15px 0;
 }
 
-#home, #clinics, #patients, #patient {
+.main {
   min-height: 500px;
+}
+
+#home, #clinics, #patients, #patient {
   opacity: 0;
 }
 
@@ -58,13 +71,14 @@ a:hover {
   border-radius: 3px;
   color: #333333;
   display: block;
+  margin-top: 20px;
   min-height: 150px;
   padding: 30px;
   position: relative;
   text-align: center;
 }
 
-.fa-trash-o, .fa-plus {
+.fa-trash-o {
   cursor: pointer;
   display: none;
   font-size: 20px;
@@ -79,23 +93,20 @@ a:hover {
 
 .fa-plus {
   color: #80b3ff;
+  font-size: 40px;
+  margin-top: 20px;
 }
 
-.clinic:hover .fa-trash-o, .clinic:hover .fa-plus,
-.patient:hover .fa-trash-o, .patient:hover .fa-plus {
+.clinic:hover,
+.patient:hover {
+  border-color: #65e765;
+}
+
+.clinic:hover .fa-trash-o,
+.patient:hover .fa-trash-o {
   display: block;
 }
 
 #new-clinic, #new-patient {
   padding: 40px 30px 0;
-}
-
-#patient table {
-  font-size: 14px;
-  padding-left: 30px;
-}
-
-#patient table tr * {
-  border: 1px solid #CCCCCC;
-  padding: 10px 20px;
 }

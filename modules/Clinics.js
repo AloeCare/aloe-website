@@ -28,7 +28,7 @@ var Clinics = React.createClass({
 
   render: function(){
     return (
-      <div id="clinics" className="container">
+      <div id="clinics" className="container main">
         <h1>Clinics</h1>
         <div className="row">
           {
