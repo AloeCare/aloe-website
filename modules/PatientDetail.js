@@ -25,6 +25,10 @@ export default React.createClass({
     this.loadPatientInfo();
   },
 
+  exportPatientInfo: function(){
+    console.log('Export Patient Info')
+  },
+
   render: function(){
     var patient = this.state.patient;
     return (
@@ -44,6 +48,7 @@ export default React.createClass({
                 </tr>
               </tbody>
             </table>
+            <button onClick={this.exportPatientInfo} type="button" className="btn btn-success">Export</button>
           </div>
         </div>
       </div>
