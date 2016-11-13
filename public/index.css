@@ -62,7 +62,119 @@ a:hover {
   min-height: 500px;
 }
 
-#home, #clinics, #patients, #patient {
+#home {
+  text-align: center;
+}
+
+#home .title {
+  margin: 50px auto 20px;
+  width: 25%;
+}
+
+#home .title img {
+  float: left;
+  width: 35%;
+}
+
+#home .title .aloe {
+ font-family: 'BellotaRegular';
+ font-size: 85px;
+ font-style: normal;
+ font-weight: normal;
+}
+
+#home .border {
+  border-top: 2px solid #cccccc;
+  margin: 0 auto;
+  width: 40%;
+}
+
+#home .message {
+  color: #777777;
+  margin: 20px auto 0;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 30%;
+}
+
+#home .message p {
+  margin: 0;
+}
+
+#home .btn, #doctor .btn {
+  background: #ff471a;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  padding: 7px 30px;
+}
+
+#doctor .btn {
+  float: right;
+  padding: 7px 15px;
+}
+
+#home .new-patient-link {
+  margin-top: 30px;
+}
+
+#home a {
+  color: #1aa3ff;
+}
+
+#doctor .title {
+  font-size: 30px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+#doctor .message {
+  color: #777777;
+  margin: 15px auto 30px;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+}
+
+#doctor .border {
+  border-top: 2px solid #cccccc;
+  margin: 0 auto;
+  width: 70%;
+}
+
+#doctor img {
+  float: left;
+  margin-right: 30px;
+}
+
+#doctor .info-container {
+  color: #777777;
+  margin: 30px auto;
+  overflow: hidden;
+  width: 70%;
+}
+
+#doctor .info {
+  float: left;
+  width: 75%;
+}
+
+#doctor .name {
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+#doctor p {
+  font-size: 15px;
+}
+
+#clinics, #patients, #patient {
   opacity: 0;
 }
 

@@ -30,7 +30,7 @@ export default React.createClass({
   render: function(){
     return (
       <div id="patients" className="container main">
-        <h1>Patients</h1>
+        <h1></h1>
         <div className="row">
           {
             this.state.data.map(function(patient) {

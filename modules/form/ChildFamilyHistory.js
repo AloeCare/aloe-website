@@ -23,7 +23,7 @@ export default React.createClass({
       <div className="container main form">
         <div className="row">
           <div className="col-lg-12">
-            <h1>Child Family History</h1>
+            <h1>Confirm Patient Info</h1>
 
             <table>
               <tbody>

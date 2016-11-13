@@ -21,7 +21,7 @@ export default React.createClass({
                   <NavLink to="/" onlyActiveOnIndex={true}>Home</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/clinics">Clinics</NavLink>
+                  <NavLink to="/clinics/1">Patients</NavLink>
                 </li>
               </ul>
             </div>

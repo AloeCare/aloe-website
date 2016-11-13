@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 import App from './App'
 import Clinics from './Clinics'
+import DoctorDetail from './DoctorDetail'
 import Home from './Home'
 import NewPatientForm from './form/NewPatientForm'
 import PatientDetail from './PatientDetail'
@@ -14,6 +15,7 @@ module.exports = (
     <Route path="/clinics" component={Clinics}/>
     <Route path="/clinics/:clinicId" component={Patients}/>
     <Route path="/clinics/:clinicId/new_patient" component={NewPatientForm}/>
+    <Route path="/doctor" component={DoctorDetail}/>
     <Route path="/patients/:patientId" component={PatientDetail}/>
   </Route>
 )
