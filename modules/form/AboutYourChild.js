@@ -7,7 +7,7 @@ export default React.createClass({
     var data = {
       firstName: this.refs.firstName.value,
       lastName: this.refs.lastName.value
-    }
+    };
 
     this.props.saveValues(data);
     this.props.nextStep();

@@ -222,3 +222,7 @@ a:hover {
 #new-clinic, #new-patient {
   padding: 40px 30px 0;
 }
+
+.form .btn {
+  margin-right: 10px;
+}

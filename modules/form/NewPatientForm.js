@@ -1,6 +1,11 @@
 import React from 'react'
 import AboutYourChild from './AboutYourChild'
+import AccountInformation from './AccountInformation'
+import ChildDentalInformation from './ChildDentalInformation'
 import ChildFamilyHistory from './ChildFamilyHistory'
+import ChildMedicalHistory from './ChildMedicalHistory'
+import InsuranceInformation from './InsuranceInformation'
+import TermsAndConditions from './TermsAndConditions'
 
 var fieldValues = {
   firstName: null,
@@ -43,7 +48,39 @@ export default React.createClass({
                   saveValues={this.saveValues} />
       case 2:
         return <ChildFamilyHistory
-                  fieldValues={fieldValues} />
+                  fieldValues={fieldValues}
+                  previousStep={this.previousStep}
+                  nextStep={this.nextStep}
+                  saveValues={this.saveValues} />
+      case 3:
+        return <InsuranceInformation
+                  fieldValues={fieldValues}
+                  previousStep={this.previousStep}
+                  nextStep={this.nextStep}
+                  saveValues={this.saveValues} />
+      case 4:
+        return <AccountInformation
+                  fieldValues={fieldValues}
+                  previousStep={this.previousStep}
+                  nextStep={this.nextStep}
+                  saveValues={this.saveValues} />
+      case 5:
+        return <ChildDentalInformation
+                  fieldValues={fieldValues}
+                  previousStep={this.previousStep}
+                  nextStep={this.nextStep}
+                  saveValues={this.saveValues} />
+      case 6:
+        return <ChildMedicalHistory
+                  fieldValues={fieldValues}
+                  previousStep={this.previousStep}
+                  nextStep={this.nextStep}
+                  saveValues={this.saveValues} />
+      case 7:
+        return <TermsAndConditions
+                  fieldValues={fieldValues}
+                  previousStep={this.previousStep}
+                  saveValues={this.saveValues} />
     }
   }
 })
