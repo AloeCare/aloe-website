@@ -5,21 +5,20 @@ export default React.createClass({
     return (
       <div className="row">
         <input
-            className="col-md-4"
+            className="col-md-5"
             type="text"
             defaultValue={this.props.firstName}
             placeholder="First Name"
             onChange={(input) => this.props.onFirstNameChange(input.target.value)} />
         <input
-            className="col-md-1"
+            className="col-md-2"
             type="text"
             defaultValue={this.props.middleInitial}
             placeholder="M.I."
             maxLength="1"
-            size="1"
             onChange={(input) => this.props.onMiddleInitialChange(input.target.value)} />
         <input
-            className="col-md-4"
+            className="col-md-5"
             type="text"
             ref="lastName"
             defaultValue={this.props.lastName}

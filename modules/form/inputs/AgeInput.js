@@ -5,11 +5,12 @@ export default React.createClass({
     return (
       <div className="row">
         <input
-            className="col-md-6"
+            className="col-md-1"
             type="text"
             defaultValue={this.props.defaultValue}
-            placeholder={this.props.placeholder}
-            onChange={(input) => this.props.onChange(input.target.value)} />
+            placeholder="##"
+            maxLength="2"
+            onChange={(input) => this.props.onAgeChange(input.target.value)} />
       </div>
     )
   }

@@ -1,5 +1,20 @@
 import React from 'react'
 
+var months = [
+  { value: 1, number:'01', name: 'January' },
+  { value: 2, number:'02', name: 'February' },
+  { value: 3, number:'03', name: 'March' },
+  { value: 4, number:'04', name: 'April' },
+  { value: 5, number:'05', name: 'May' },
+  { value: 6, number:'06', name: 'June' },
+  { value: 7, number:'07', name: 'July' },
+  { value: 8, number:'08', name: 'August' },
+  { value: 9, number:'09', name: 'September' },
+  { value: 10, number:'10', name: 'October' },
+  { value: 11, number:'11', name: 'November' },
+  { value: 12, number:'12', name: 'December' }
+]
+
 export default React.createClass({
   getInitialState: function() {
     return {
@@ -20,21 +35,6 @@ export default React.createClass({
   },
 
   render: function(){
-    var months = [
-      { value: 1, number:'01', name: 'January' },
-      { value: 2, number:'02', name: 'February' },
-      { value: 3, number:'03', name: 'March' },
-      { value: 4, number:'04', name: 'April' },
-      { value: 5, number:'05', name: 'May' },
-      { value: 6, number:'06', name: 'June' },
-      { value: 7, number:'07', name: 'July' },
-      { value: 8, number:'08', name: 'August' },
-      { value: 9, number:'09', name: 'September' },
-      { value: 10, number:'10', name: 'October' },
-      { value: 11, number:'11', name: 'November' },
-      { value: 12, number:'12', name: 'December' }
-    ];
-
     var options = [];
     options.push(<option key='0'>Month</option>);
 
@@ -61,9 +61,7 @@ export default React.createClass({
           type="text"
           onChange={this.props.onChange}
           defaultValue={this.props.defaultValue}>
-
         {options}
-
       </select>
     )
   }

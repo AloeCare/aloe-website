@@ -9,7 +9,17 @@ import TermsAndConditions from './TermsAndConditions'
 
 var fieldValues = {
   firstName: null,
+  middleInitial: null,
   lastName: null,
+  nickname: null,
+  gender: null,
+  birthDate: null,
+  age: null,
+  school: null,
+  gradeLevel: null,
+  homePhone: null,
+  socialSecurity: null,
+  address: null,
   clinicId: null
 }
 
