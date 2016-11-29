@@ -4,6 +4,7 @@ import DentalInfo from './DentalInfo'
 import Insurance from './Insurance'
 import MedicalHistory from './MedicalHistory'
 import PatientInfo from './PatientInfo'
+import SummaryForm from './SummaryForm'
 import TermsAndConditions from './TermsAndConditions'
 import VisitAndReferral from './VisitAndReferral'
 
@@ -42,41 +43,44 @@ export default React.createClass({
   render: function(){
     switch (this.state.step) {
       case 1:
+        return <SummaryForm
+                  nextStep={this.nextStep} />
+      case 2:
         return <PatientInfo
                   fieldValues={fieldValues}
                   nextStep={this.nextStep}
                   saveValues={this.saveValues} />
-      case 2:
+      case 3:
         return <Insurance
                   fieldValues={fieldValues}
                   previousStep={this.previousStep}
                   nextStep={this.nextStep}
                   saveValues={this.saveValues} />
-      case 3:
+      case 4:
         return <AccountAndPayment
                   fieldValues={fieldValues}
                   previousStep={this.previousStep}
                   nextStep={this.nextStep}
                   saveValues={this.saveValues} />
-      case 4:
+      case 5:
         return <DentalInfo
                   fieldValues={fieldValues}
                   previousStep={this.previousStep}
                   nextStep={this.nextStep}
                   saveValues={this.saveValues} />
-      case 5:
+      case 6:
         return <MedicalHistory
                   fieldValues={fieldValues}
                   previousStep={this.previousStep}
                   nextStep={this.nextStep}
                   saveValues={this.saveValues} />
-      case 6:
+      case 7:
         return <VisitAndReferral
                   fieldValues={fieldValues}
                   previousStep={this.previousStep}
                   nextStep={this.nextStep}
                   saveValues={this.saveValues} />
-      case 7:
+      case 8:
         return <TermsAndConditions
                   fieldValues={fieldValues}
                   previousStep={this.previousStep}

@@ -224,5 +224,28 @@ a:hover {
 }
 
 .form .btn {
-  margin-right: 10px;
+  float: right;
+}
+
+#summary-form-preview {
+  color: #4a4a4a;
+}
+
+#summary-form-preview ol {
+  padding: 45px 0 0 15px;
+}
+
+#summary-form-preview .title {
+  font-size: 24px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+#summary-form-preview .border {
+  border-top: solid 1px #cccccc;
+}
+
+#summary-form-preview li {
+  font-weight: 500;
+  margin-bottom: 10px;
 }
