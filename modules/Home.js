@@ -18,7 +18,7 @@ export default React.createClass({
             </div>
             <button type="button" className="btn">Log In</button>
             <div className="new-patient-link">
-              <NavLink to="/doctor">New Patient? Start here.</NavLink>
+              <NavLink to="/clinics/1/new_patient">New Patient? Start here.</NavLink>
             </div>
           </div>
         </div>
