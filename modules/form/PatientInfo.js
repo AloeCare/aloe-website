@@ -18,7 +18,7 @@ export default React.createClass({
       <div className="container main form">
         <div className="row">
           <div className="col-lg-12">
-            <h1>About Your Child</h1>
+            <h1>Patient Info</h1>
 
             <input type="text" ref="firstName" defaultValue={this.props.fieldValues.firstName} placeholder="Enter First Name"/>
 
@@ -28,7 +28,7 @@ export default React.createClass({
 
             <br/>
 
-            <button onClick={this.saveAndContinue} type="button" className="btn btn-success">Save and Continue</button>
+            <button onClick={this.saveAndContinue} type="button" className="btn btn-success">Continue</button>
           </div>
         </div>
       </div>
