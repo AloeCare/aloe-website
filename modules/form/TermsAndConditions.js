@@ -37,8 +37,8 @@ export default React.createClass({
               </tbody>
             </table>
 
-            <button onClick={this.props.previousStep} type="button" className="btn btn-success">Back</button>
             <button onClick={this.addNewPatient} type="button" className="btn btn-success">Submit</button>
+            <button onClick={this.props.previousStep} type="button" className="btn btn-success">Back</button>
           </div>
         </div>
       </div>

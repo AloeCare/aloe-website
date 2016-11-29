@@ -1,11 +1,12 @@
 import React from 'react'
-import AboutYourChild from './AboutYourChild'
-import AccountInformation from './AccountInformation'
-import ChildDentalInformation from './ChildDentalInformation'
-import ChildFamilyHistory from './ChildFamilyHistory'
-import ChildMedicalHistory from './ChildMedicalHistory'
-import InsuranceInformation from './InsuranceInformation'
+import AccountAndPayment from './AccountAndPayment'
+import DentalInfo from './DentalInfo'
+import Insurance from './Insurance'
+import MedicalHistory from './MedicalHistory'
+import PatientInfo from './PatientInfo'
+import SummaryForm from './SummaryForm'
 import TermsAndConditions from './TermsAndConditions'
+import VisitAndReferral from './VisitAndReferral'
 
 var fieldValues = {
   firstName: null,
@@ -42,41 +43,44 @@ export default React.createClass({
   render: function(){
     switch (this.state.step) {
       case 1:
-        return <AboutYourChild
-                  fieldValues={fieldValues}
-                  nextStep={this.nextStep}
-                  saveValues={this.saveValues} />
+        return <SummaryForm
+                  nextStep={this.nextStep} />
       case 2:
-        return <ChildFamilyHistory
+        return <PatientInfo
                   fieldValues={fieldValues}
-                  previousStep={this.previousStep}
                   nextStep={this.nextStep}
                   saveValues={this.saveValues} />
       case 3:
-        return <InsuranceInformation
+        return <Insurance
                   fieldValues={fieldValues}
                   previousStep={this.previousStep}
                   nextStep={this.nextStep}
                   saveValues={this.saveValues} />
       case 4:
-        return <AccountInformation
+        return <AccountAndPayment
                   fieldValues={fieldValues}
                   previousStep={this.previousStep}
                   nextStep={this.nextStep}
                   saveValues={this.saveValues} />
       case 5:
-        return <ChildDentalInformation
+        return <DentalInfo
                   fieldValues={fieldValues}
                   previousStep={this.previousStep}
                   nextStep={this.nextStep}
                   saveValues={this.saveValues} />
       case 6:
-        return <ChildMedicalHistory
+        return <MedicalHistory
                   fieldValues={fieldValues}
                   previousStep={this.previousStep}
                   nextStep={this.nextStep}
                   saveValues={this.saveValues} />
       case 7:
+        return <VisitAndReferral
+                  fieldValues={fieldValues}
+                  previousStep={this.previousStep}
+                  nextStep={this.nextStep}
+                  saveValues={this.saveValues} />
+      case 8:
         return <TermsAndConditions
                   fieldValues={fieldValues}
                   previousStep={this.previousStep}
